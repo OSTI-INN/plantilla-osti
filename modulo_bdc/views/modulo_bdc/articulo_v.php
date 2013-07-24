@@ -5,6 +5,13 @@
 		<title>BDC</title>
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>/css/estilo.css">
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>/modulo_bdc/css/estilos_bdc.css">
+		
+		<style>
+			div.boton_accion {
+				background-image:url(<?=base_url()?>/imgs/acciones.png);
+			} 
+		</style>
+
 		<script type="text/javascript">
 		
 		function enviar(){
@@ -89,7 +96,7 @@
             </select>
 			<br/>
 
-			<label class="ancho-120 seguido alinear-derecha">Título:</label><input class="ancho-400" type="text" name="titulo" id="titulo" size="15" maxlength="50">
+			<label class="ancho-120 seguido alinear-derecha">Título:</label> <input class="ancho-400" type="text" name="titulo" id="titulo" size="15" maxlength="50">
 			<br/>
 			<ul class="tabs">
 				<li>
@@ -111,7 +118,7 @@
 				<br/>
 			</div>
 
-			<label class="ancho-120 seguido alinear-derecha">Palabras claves:</label><input class="ancho-200" type="text" name="palabras_claves" id="palabras_claves" size="15" maxlength="50">
+			<label class="ancho-120 seguido alinear-derecha">Palabras claves:</label> <input class="ancho-200" type="text" name="palabras_claves" id="palabras_claves" size="15" maxlength="50">
 			<?php /**
 			NIVEL PRIVACIDAD
 			<label class="ancho-80 seguido alinear-derecha">Privacidad:</label>

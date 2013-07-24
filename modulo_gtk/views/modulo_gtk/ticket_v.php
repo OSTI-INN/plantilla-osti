@@ -9,7 +9,7 @@
 				border-radius: 3px;
 				width: 30px;
 				height: 18px;
-				background-image:url(http://172.30.0.83/mantis%28BETA%29/imgs/acciones.png); 
+				background-image:url(<?=base_url()?>/imgs/acciones.png);
 		  		background-repeat: no-repeat no-repeat;
 		  		display: inline-block;
 	  		}

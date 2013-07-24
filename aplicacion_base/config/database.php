@@ -48,16 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-if ( $_SERVER ['SERVER_NAME'] == 'localhost'){
-	$db['default']['hostname'] = 'localhost';
-	$db['default']['password'] = '321321';
-} else {
-	$db['default']['hostname'] = '172.30.0.83';
-	$db['default']['password'] = 'inndesarrollo';
-}
-
+$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'postgres';
-$db['default']['database'] = 'intranet';
+$db['default']['password'] = '321321';
+$db['default']['database'] = 'desarrollo';
 $db['default']['dbdriver'] = 'postgre';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
@@ -69,7 +63,6 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
-
 
 
 /* End of file database.php */

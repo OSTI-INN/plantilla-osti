@@ -3,7 +3,7 @@
 if ( !function_exists('simple_html_grid')){
 
 	//crea un grid simple basado en html .. jjy
-	function simple_html_grid($id, $arreglo_datos, $parametros=array()){
+	function simple_html_grid ( $id, $arreglo_datos, $parametros=array() ) {
 		// echo"<pre>";
 		// 	print_r($arreglo_datos);
 		// 	print_r($parametros);
@@ -195,9 +195,21 @@ if (!function_exists('html_pestanas')){
 		$html_salida.='<div id="'.$id.'" name="'.$id.'" class="contenedor-pestanas">
 				<ul class="pestanas ancho-full">
 					&nbsp;';
-					foreach($parametros['pestanas'] as $id_tab=>$titulo_tab){
+					//prp($parametros);
+					foreach ( $parametros['pestanas'] as $id_tab => $titulo_tab ) {
+						
+						//echo $id_tab . '-' . (isset ( $parametros ['enlaces'][$id_tab] ) == true ). ' - ' .  $parametros ['enlaces'][$id_tab];
+
 						$html_salida.='<li class="tab '.$clases.' " style=" '.$estilos.' ">';
-						$html_salida.='<a href="#" rel="'.$id_tab.'">'
+						$html_salida.='<a href="';
+						$html_salida.=( ( isset ( $parametros ['enlaces'][$id_tab] ) ) ? 
+										$parametros ['enlaces'][$id_tab] 
+										: ( ( file_exists ( base_url()."controllers/{$id_tab}/." ) !== '' )  ?
+											site_url()."/s/{$id_tab}/{$id_tab}_c"
+											: "#"
+										)
+									);
+						$html_salida.='" rel="'.$id_tab.'">'
 									.$titulo_tab
 									.'</a>'
 									."</li>\n";
@@ -275,4 +287,26 @@ if(!function_exists('html_lista_segun_tabla')){
 
         return $html_salida;
 	}
+
+/**
+	FUNCIONES COMUNES! .. ns
+**/
+	if( ! function_exists('prp'))
+	{
+		function prp($arg=array())
+		{
+			echo "\n<pre>\n";
+			if( ! is_array($arg)) {
+				if( ! is_object($arg)) {
+					echo $arg;
+				} else {
+					print_r((array) $arg);
+				}
+			} else {
+				print_r($arg);
+			}
+			echo "</pre>\n";
+		}
+	}
+
 }

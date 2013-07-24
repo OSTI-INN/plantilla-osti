@@ -5,6 +5,13 @@
 		<title>BDC</title>
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>/css/estilo.css">
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>/modulo_bdc/css/estilos_bdc.css">
+		
+		<style>
+			div.boton_accion {
+				background-image:url(<?=base_url()?>/imgs/acciones.png);
+			} 
+		</style>
+
 		<script type="text/javascript">
 		
 		function enviar(id){
