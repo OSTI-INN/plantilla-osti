@@ -1,0 +1,562 @@
+body {
+	font-family: Arial, DejaVu, sans-serif;
+	font-size: 0.8em;
+	margin: 0;
+	background-color: #fff;
+}
+.panel-1 {
+	position: relative;
+	background-color: #f0f3f9;
+	border: 1px solid #ccc;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+	min-width: 100px;
+	min-height: 100px;
+	border-radius: 3px;
+	display: inline-block;
+}
+.formulario .panel-1 {
+	padding: 10px;
+}
+.formulario label div {
+	width: 200px;
+	text-align: right;
+	vertical-align: top;
+	padding-top: 4px;
+	margin-right: 5px;
+}
+.formulario label,
+.formulario input[type="text"],
+.formulario input[type="password"],
+.formulario textarea,
+.formulario select {
+	font-size: 0.95em;
+	color: #333;
+}
+.formulario input[type="text"],
+.formulario input[type="password"],
+.formulario textarea,
+.formulario select {
+	border: 1px solid #ccc;
+	padding: 4px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.2) inset;
+	margin-bottom: 10px;
+	min-width: 100px;
+	font-family: inherit;
+}
+.panel-1 input[type="text"],
+.panel-1 input[type="password"],
+.panel-1 textarea,
+.panel-1 select {
+	background-color: #ffffde;
+}
+.formulario input[type="text"]:hover ,
+.formulario input[type="password"]:hover ,
+.formulario textarea:hover ,
+.formulario select:hover{
+	border: 1px solid rgba(0,120,255,0.5);
+}
+.formulario input[type="text"]:focus ,
+.formulario input[type="password"]:focus ,
+.formulario textarea:focus ,
+.formulario select:focus {
+	border: 1px solid rgba(0,120,255,0.75);
+	background-color: #ffffde;
+}
+.formulario hr {
+	margin: 5px 0 10px 0;
+	padding: 0;
+}
+.negrita {
+	font-weight: bold;
+}
+.centrado {
+	display: block;
+	margin: 0 auto !important;
+	clear: both !important;
+	float: none !important;
+}
+.formulario {
+	margin-top: 20px;
+}
+.flotado-derecha {
+	display: inline-block;
+	float: right;
+}
+.flotado-izquierda {
+	display: inline-block;
+	float: left;
+}
+.titulo_panel-1{
+	position:relative;
+	border: 1px solid #fff;
+	min-height: 10px;
+	padding: 10px;
+	left:0;
+	top: 0;
+	right: 0;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 3px;
+}
+.titulo_panel-1 h2 {
+	font-size: 1.1em;
+	margin: 0px;
+	padding: 0px;
+}
+.cintillo-sup{
+	position:fixed;
+	border-top: 1px solid rgba(0,0,0,0.25);
+	border-bottom: 1px dotted rgba(0,0,0,0.5);
+	padding-top: 3px;
+	left:0;
+	top: 0;
+	height: 20px;
+	right: 0;
+	background-color: rgba(0,0,0,0.75);
+	z-index: 100;
+	color: #fff;
+}
+.cintillo-sup a {
+	color: #fff;	
+}
+.fijo {
+	position: fixed;
+}
+a{
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.barra-botones {
+	position:fixed;
+	padding: 0;
+	margin: 0;
+	left:0;
+	top: 0;
+	padding-top: 25px;
+	right: 0;
+	border-bottom: 1px solid #ccc;
+	background-color: #efefef;
+	z-index: 99;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.25) inset;
+}
+.botones-barra {
+	max-width: 800px;
+	position: relative;
+	list-style-type: none;
+	top: 0px;
+	margin: 7px auto -1px auto;
+	padding: 0;
+	z-index: 98;
+}
+.botones-barra li{
+	position: relative;
+	border: 1px solid transparent;
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+}
+.botones-barra li.tab{
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	background-color: rgba(200,200,200,0.5);
+	color: rgba(0,0,0,0.5);
+	padding: 5px 10px;
+	border-radius: 3px 3px 0px 0px;
+	margin-right: 2px;
+	margin-bottom: 1px; 
+}
+.botones-barra li.activo{
+	background-color: #fff;
+	border-bottom: 2px solid #fff;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding-top: 10px;
+	margin-bottom: -2px;
+	margin-top: 4px;
+	font-weight: bold;
+}
+.botones-barra li:hover {
+	/* border: 1px solid rgba(0,0,0,.3);*/
+}
+.botones-barra li a {
+	position: relative;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 0;
+	text-indent: -30000px;
+	margin: 0;
+	padding: 0;
+}
+.botones-barra li a img {
+	max-width: 72px;
+	max-height: 72px;
+	margin: 0;
+	padding: 0;
+}
+.barra-estado{
+	position:fixed;
+	padding: 0;
+	padding: 7px;
+	margin: 0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	border-top: 1px solid #ccc;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+	background-color: #efefef;	
+	z-index: 99;
+	font-size: 0.85em;
+}
+ul.menu-izquierda {
+	list-style-position: inside;
+	padding: 0px 15px;
+	list-style-type: none;
+}
+ul.menu-izquierda li.activo {
+	font-weight: bold;
+}
+
+ul.menu-izquierda ul{
+	margin-top: 5px;
+	list-style-position: inside;
+	padding-left: 10px;
+	list-style-type: disc;
+}
+img.miniatura-receta {
+	width: 64px;
+	height: auto;
+}
+.posicion-relativa {
+	position: relative;
+}
+h1,h2,h3,h4,p{
+	padding: 0;
+	margin: 0;
+}
+.seccion {
+	
+}
+hr {
+	border: 0;
+	border-bottom: 1px dotted #ccc;
+}
+.alinear-arriba {
+	vertical-align: top !important;
+}	
+.alinear-abajo {
+	vertical-align: bottom !important;
+}	
+.alinear-centro {
+	text-align: center !important;
+}
+.alinear-medio {
+	vertical-align: middle !important;
+}
+.alinear-izquierda {
+	text-align: left !important;
+}
+.alinear-derecha {
+	text-align: right !important;
+}
+.tabla-receta-miniatura td{
+	padding: 5px;
+}
+.seguido {
+	display: inline-block;
+}
+.tabla_apoyo {
+	border: 1px solid red;
+}
+.html-grid {
+	width: 100%;
+	border: 1px solid #ccc;
+	border-right: 0;
+	border-bottom: 0;
+	border-spacing: 0px;
+}
+.html-grid td, 
+.html-grid th {
+	border-collapse: collapse;
+	border: 0;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.html-grid th, .html-grid td {
+	padding: 5px;
+}
+.html-grid tr th {
+	text-align: left;
+	background-color: #F0F3F9;
+}
+.html-grid .par {
+	background-color: #f5f5f5;
+}
+.html-grid .impar {
+	background-color: #ffffff;
+}
+.ancho-full{
+	width: 100% !important;
+}
+.resaltar {
+	background-color: #ffff55;
+	border: 2px dashed red;
+}
+.mensaje {
+	text-align: center;
+	max-width: 600px;
+	width: 100%;
+	padding: 5px;
+	margin: 10px auto;
+}
+.mensaje-info {
+	border: 1px dotted rgba(0,0,255,1);
+	background-color: rgba(0,0,255,0.25);
+}
+.mensaje-advertencia {
+	border: 1px dotted rgba(255,205,0,1);
+	background-color: rgba(255,205,0,0.25);
+}
+.mensaje-exito {
+	border: 1px dotted rgba(0,205,0,1);
+	background-color: rgba(0,205,0,0.25);
+}
+.ancho-630 {
+	max-width: 630px !important;
+	width: 100%;
+}
+.ancho-250 {
+	width: 250px !important;
+}
+.ancho-300 {
+	width: 300px !important;
+}
+.ancho-340 {
+	width: 340px !important;
+}
+.ancho-100 {
+	width: 100px !important;
+}
+.ancho-120 {
+	width: 120px !important;
+}
+.ancho-140 {
+	width: 140px !important;
+}
+.ancho-80 {
+	width: 80px !important;
+}
+.html-grid tr.registro_nuevo td,
+.html-grid tr.registro_editable td {
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+.html-grid tr.registro_nuevo td input[type="text"],
+.html-grid tr.registro_nuevo td select,
+.html-grid tr.registro_editable td input[type="text"],
+.html-grid tr.registro_editable td select{
+	margin: 0px;
+	border-collapse: collapse;
+	border: 0px;
+	box-shadow: none;
+} 
+.html-grid tr.registro_nuevo td input[type="text"]:focus,
+.html-grid tr.registro_nuevo td select:focus,
+.html-grid tr.registro_editable td input[type="text"]:focus,
+.html-grid tr.registro_editable td select:focus{
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.2) inset;
+	background-color: #ffffde;
+} 
+.link_registro_nuevo_grid,
+.link_guardar_registro,
+.link_cancelar_edicion,
+.link_cambiar_foto {
+	margin: 2px;
+	line-height: 20px;
+	font-size: 0.85em;
+}
+.invisible{
+	display: none;
+	visibility: hidden;
+}
+.boton_ico_eliminar {
+	cursor: pointer !important;
+}
+tr.seleccionable:hover {
+	background-color: rgba(0,0,255,0.25);
+}
+div.foto-receta {
+	border:1px solid #ccc;
+	width: 150px;
+	height: 200px;
+	background-color: #fff;
+	padding: 3px;
+}
+div.foto-receta div {
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-size: auto 200px;
+}
+div.foto-receta-mini {
+	border:1px solid #ccc;
+	width: 100px;
+	height: 100px;
+	background-color: #fff;
+	padding: 2px;
+}
+div.foto-receta-mini div {
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-size: auto 100px;
+}
+div.foto-persona-mini {
+	border:1px solid #ccc;
+	width: 75px;
+	height: 100px;
+	background-color: #fff;
+	padding: 2px;
+}
+div.foto-persona-mini div {
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-size: auto 100px;
+}
+div.imagen-video-mini {
+	border:1px solid #ccc;
+	width: 120px;
+	height: 85px;
+	background-color: #fff;
+	padding: 2px;
+}
+div.imagen-video-mini div {
+	width: 100%;
+	height: 100%;
+	background-position: left top;
+	background-size: auto 85px;
+}
+.ancho-800 {
+	width: 800px !important;
+}
+.ancho-600 {
+	width: 600px !important;
+}
+.ancho-400 {
+	width: 400px !important;
+}
+.ancho-450 {
+	width: 450px !important;
+}
+.ancho-200 {
+	width: 200px !important;
+}
+.ancho-150 {
+	width: 150px !important;
+}
+.ancho-130 {
+	width: 130px !important;
+}
+.ancho-50 {
+	min-width: 50px !important;
+	width: 50px !important;
+}
+.ancho-30 {
+	min-width: 30px !important;
+	width: 30px !important;
+}
+.alto-50 {
+	height: 50px !important;
+}
+.alto-80 {
+	height: 80px !important;
+}
+.alto-100 {
+	height: 100px !important;
+}
+.alto-120 {
+	height: 120px !important;
+}
+.alto-150 {
+	height: 150px !important;
+}
+.alto-200 {
+	height: 200px !important;
+}
+
+.contenedor-pestanas {
+	border-bottom: 1px solid #ddd;
+}
+.pestanas {
+	max-width: 800px;
+	position: relative;
+	list-style-type: none;
+	top: 0px;
+	margin: 7px auto -1px auto;
+	padding: 0;
+	z-index: 98;
+}
+.pestanas li{
+	position: relative;
+	border: 1px solid transparent;
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+}
+.pestanas li.tab{
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	background-color: rgba(200,200,200,0.3);
+	color: rgba(0,0,0,0.5);
+	padding: 5px 10px;
+	border-radius: 3px 3px 0px 0px;
+	margin-right: 2px;
+	margin-bottom: 1px; 
+	white-space: nowrap;
+	font-size: 0.9em;
+}
+.pestanas li.activo{
+	background-color: #fff;
+	border-bottom: 2px solid #fff;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	padding-top: 10px;
+	margin-bottom: -3px;
+	margin-top: 4px;
+	font-weight: bold;
+}
+.pestanas li:hover {
+	/* border: 1px solid rgba(0,0,0,.3);*/
+}
+.pestanas li a {
+	position: relative;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 0;
+	text-indent: -30000px;
+	margin: 0;
+	padding: 0;
+}
+.pestanas li a img {
+	max-width: 72px;
+	max-height: 72px;
+	margin: 0;
+	padding: 0;
+}
+.tab_activo {
+
+}
+.limpiar-flotado {
+	clear:both;
+	float:none;
+}
