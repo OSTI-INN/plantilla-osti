@@ -48,10 +48,16 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+if ( $_SERVER ['SERVER_NAME'] == 'localhost'){
+  $db['default']['hostname'] = 'localhost';
+  $db['default']['password'] = '321321';
+} else {
+  $db['default']['hostname'] = '172.30.0.83';
+  $db['default']['password'] = 'inndesarrollo';
+}
+
 $db['default']['username'] = 'postgres';
-$db['default']['password'] = '321321';
-$db['default']['database'] = 'desarrollo';
+$db['default']['database'] = 'intranet';
 $db['default']['dbdriver'] = 'postgre';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
@@ -67,3 +73,19 @@ $db['default']['stricton'] = FALSE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
+ /*
+  echo '<pre>';
+  print_r($db['default']);
+  echo '</pre>';
+
+  echo 'Connecting to database: ' .$db['default']['database'];
+  $dbh=pg_connect
+  (
+    'host='.$db['default']['hostname'].' user='.$db['default']['username'].
+    ' password='.$db['default']['password'])
+    or die('Cannot connect to the database because: ' . mysql_error());
+    mysql_select_db ($db['default']['database']);
+
+    echo '<br />   Connected OK:'  ;
+    die( 'file: ' .__FILE__ . ' Line: ' .__LINE__); 
+   */
