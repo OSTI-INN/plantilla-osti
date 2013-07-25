@@ -62,6 +62,9 @@ if ( !function_exists('simple_html_grid')){
 						if($editable) {
 							$html_salida.= "<input class='{$par_o_impar} celda_grid' id='{$campo}[]' name='{$campo}[]' type='text' class='{$par_o_impar} ancho-full' value='$valor' title='$valor' rel='$fila'/>";
 						} else {
+							if ( isset ( $parametros['campos'][$campo] ) ) { //si viene con formato
+								$valor = str_replace( '{@valor}', $valor, $parametros['campos'][$campo] );
+							}
 							$html_salida.= $valor;
 						}
 						$html_salida.= "</td>";
@@ -84,8 +87,12 @@ if ( !function_exists('simple_html_grid')){
 		}
 		$reg=array();
 		if(isset($parametros['campos'])){
-			foreach($parametros['campos'] as $campo){
-				$reg[$campo]="";
+			foreach($parametros['campos'] as $campo=>$formato){
+				if( !is_integer($campo) ) {
+					$reg[$campo]="";
+				} else {
+					$reg[$formato]="";
+				}
 			}
 		}
 		$reg['codigo_tabla']=$parametros['codigo_tabla'];

@@ -1,7 +1,7 @@
 
 	<div class="ancho-630 flotado-derecha">
 
-		<?php /* img class="" src='<?=base_url()?>/imgs/logo.png'/> */ ?>
+		<img class="" src='<?=base_url()?>/imgs/logo.png'/>
 		
 		<img src='<?=base_url()?>/imgs/mantis-1.jpg'/>
 

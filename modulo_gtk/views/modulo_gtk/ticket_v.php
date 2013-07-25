@@ -1,33 +1,35 @@
+<!DOCTYPE html>
 <html>
 	<head>
 	<meta charset='UTF-8'>
 	<link rel="stylesheet" type="text/css" href="<?=base_url()?>/css/estilo.css">
 
 	<style type="text/css">
-			div.boton_accion{
-				border: 1px solid #ddd !important;
-				border-radius: 3px;
-				width: 30px;
-				height: 18px;
-				background-image:url(<?=base_url()?>/imgs/acciones.png);
-		  		background-repeat: no-repeat no-repeat;
-		  		display: inline-block;
-	  		}
-	  		div#boton_guardar  { background-position:50% -18px;  }
-	  		div#boton_inicio   { background-position:50% -391px; }
-	  		div#boton_limpiar  { background-position:50% -194px; }
-	  		div#boton_adjuntar { background-position:50% -256px; } 
+		div.boton_accion{
+			border: 1px solid #ddd !important;
+			border-radius: 3px;
+			width: 30px;
+			height: 18px;
+			background-image:url(<?=base_url()?>/imgs/acciones.png);
+	  		background-repeat: no-repeat no-repeat;
+	  		display: inline-block;
+		}
+		
+		div#boton_guardar  { background-position:50% -18px;  }
+		div#boton_inicio   { background-position:50% -391px; }
+		div#boton_limpiar  { background-position:50% -194px; }
+		div#boton_adjuntar { background-position:50% -256px; } 
 
-	  		ul.tabs{
-	  			list-style-type: none;
-	  		}
-	  		ul.tabs li{
-	  			display: inline-block;
-	  			border: 1px solid #ddd !important;
-	  			padding: 5px;
-	  		}
-	  		
-		</style>
+		ul.tabs{
+			list-style-type: none;
+		}
+		ul.tabs li{
+			display: inline-block;
+			border: 1px solid #ddd !important;
+			padding: 5px;
+		}
+			
+	</style>
 	<script type="text/javascript">
 		
 		function enviar(){
@@ -47,28 +49,28 @@
 	<h2 class="titulo-seccion seguido">Tickets</h2>
 	<form class="formulario sin-margenes" id="formulario" name="formulario" action="<?=site_url()?>/modulo_gtk/ticket_c/insertar_ticket" method="post">
 
-			<hr>
+		<hr>
 
-			<a href='<?=site_url()?>/..'
-			   title="Inicio"
-			><div class="boton_accion" id="boton_inicio" name="boton_inicio"></div></a>
+		<a href='<?=site_url()?>/..' target = "_top"
+		   title="Inicio"
+		><div class="boton_accion" id="boton_inicio" name="boton_inicio"></div></a>
 
-			<a  href='javascript:void(0);' 
-				title="Guardar" 
-				onclick="javascript:enviar();"
-			><div class="boton_accion" id="boton_guardar" name="boton_guardar"></div></a>
+		<a  href='javascript:void(0);' 
+			title="Guardar" 
+			onclick="javascript:enviar();"
+		><div class="boton_accion" id="boton_guardar" name="boton_guardar"></div></a>
 
-			<a href='javascript:void(0);' 
-			   title="Limpiar" 
-			   onclick="javascript:limpiar();"
-			><div class="boton_accion" id="boton_limpiar" name="boton_limpiar"></div></a>
+		<a href='javascript:void(0);' 
+		   title="Limpiar" 
+		   onclick="javascript:limpiar();"
+		><div class="boton_accion" id="boton_limpiar" name="boton_limpiar"></div></a>
+		
+		<a href='javascript:void(0);'
+		   title="Adjuntar"
+		   onclick="javascript:alert('Adjuntar');"
+		><div class="boton_accion" id="boton_adjuntar" name="boton_adjuntar"></div></a>
 			
-			<a href='javascript:void(0);'
-			   title="Adjuntar"
-			   onclick="javascript:alert('Adjuntar');"
-			><div class="boton_accion" id="boton_adjuntar" name="boton_adjuntar"></div></a>
-				
-			<hr width="100%">
+		<hr>
 		<label class="ancho-120 seguido alinear-derecha">Categorías:</label>
 		    <select class="ancho-200" width="50%" id="codigo_categoria" name="codigo_categoria">
 		        <option selected value="">Seleccione Categoría</option>

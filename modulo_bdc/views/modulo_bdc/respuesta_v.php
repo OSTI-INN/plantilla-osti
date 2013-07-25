@@ -39,7 +39,7 @@
 		<hr>
 		<?php /* <form class="formulario" id="formulario" name="formulario" action="<?=site_url()?>/modulo_bdc/articulo_c/listar_respuestas" method="post"> */ ?>
 
-			<a href='<?=site_url()?>/..'
+			<a href='<?=site_url()?>/..' target = "_top"
 			   title="Inicio"
 			><div class="boton_accion" id="boton_inicio" name="boton_inicio"></div></a>
 			
@@ -104,12 +104,12 @@
 						Mantis ha identificado que la solución a tu duda pudiera encontrarse en alguno de los siguientes artículos de nuestra Base de Conocimientos ...
 					</p>
 					<ul>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
+						<li><a href="javascript:alert('mostrar artìculo N');">¿ Cómo crear un ticket ?</a></li>
+						<li><a href="javascript:alert('mostrar artìculo N');">¿ Cómo crear un ticket ?</a></li>
+						<li><a href="javascript:alert('mostrar artìculo N');">¿ Cómo crear un ticket ?</a></li>
+						<li><a href="javascript:alert('mostrar artìculo N');">¿ Cómo crear un ticket ?</a></li>
+						<li><a href="javascript:alert('mostrar artìculo N');">¿ Cómo crear un ticket ?</a></li>
+						<li><a href="javascript:alert('mostrar artìculo N');">¿ Cómo crear un ticket ?</a></li>
 					</ul>
 
 				</td>
@@ -123,12 +123,10 @@
 						Mantis ha identificado que la solución a tu duda pudiera encontrarse en alguno de los siguientes artículos de nuestra Base de Conocimientos ...
 					</p>
 					<ul>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
-						<li><a href="#">¿ Cómo crear un ticket ?</a></li>
+						<li><a href="javascript:alert('mostrar artìculo N');">¿ Cómo crear un ticket ?</a></li>
+						<li><a href="javascript:alert('mostrar artìculo N');">¿ Cómo crear un ticket ?</a></li>
+						<li><a href="javascript:alert('mostrar artìculo N');">¿ Cómo crear un ticket ?</a></li>
+						<li><a href="javascript:alert('mostrar artìculo N');">¿ Cómo crear un ticket ?</a></li>
 					</ul>
 
 				</td>
