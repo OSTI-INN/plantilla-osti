@@ -9,8 +9,8 @@ class Ticket_c extends CI_Controller {
 
 	public function index(){
 
-		$listar['categoria']     = $this->listar_categoria();
-		$listar['sub_categoria'] = $this->listar_sub_categoria();
+		$listar['categoria']     = $this->ticket_m->listar_categoria();
+		$listar['sub_categoria'] = $this->ticket_m->listar_sub_categoria();
 
 		$this->load->view('modulo_gtk/ticket_v', $listar);
 	}
@@ -39,20 +39,6 @@ class Ticket_c extends CI_Controller {
  		
 		$this->load->view('modulo_gtk/listar_tickets_v', $datos);
    	}
-
-	public function listar_categoria(){
-		$id='';
- 
-		$listar = $this->ticket_m->listar_categoria();
-		return $listar;
-   	}
-	
-	public function listar_sub_categoria(){
-		$id='';
- 
-		$listar = $this->ticket_m->listar_sub_categoria();
-		return $listar;
-   }
 
 
 }
