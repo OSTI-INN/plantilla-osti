@@ -1,13 +1,17 @@
 <?php global $config; ?>
 <?php if(!isset($config['sesion']['iniciada'])){
+
 		if(isset($_POST['btnAcceder'])){
 			$config['sesion']['iniciada']=true;;
 			$sesion_iniciada=true;
 		} else {
 			$sesion_iniciada=false;
 		}
+
 } else {
+
 	$sesion_iniciada=true;
+
 } 
 $sesion_iniciada=true; //fijo para poder avanzar ! ... jjy
 ?>
@@ -56,28 +60,18 @@ $sesion_iniciada=true; //fijo para poder avanzar ! ... jjy
 	</div>
 	<div class="barra-botones">
 		<ul class="botones-barra">
-
-			<?=@html_mensaje('',$mensaje,$tipo_mensaje)?>
+			
+			<?php $mensaje = "Probando"; ?>
 
 			<?php
 				$parametros['pestanas']			= $tabs;
 				$parametros['enlaces'] 			= $url_enlaces;
 				$parametros['clases-pestanas']	= "seguido"; // ancho-120
 				$parametros['estilo-pestanas']	= "font-size: 1em; min-width:120px;";
+				$parametros['id_pestana_activa']	= $seccion_activa;
 			?>
 			<?=html_pestanas('',$parametros)?>
 
-
-			<?php /*
-				foreach($tabs as $seccion => $tab){	
-					eval('$este_tab_activo=$tab_'.$seccion.';');
-					?>
-					<li id="tab_<?=$seccion?>" class="<?=$este_tab_activo?> tab ancho-100">
-						<?=($sesion_iniciada || $seccion=="inicio")?'<a target="_self" href="'.site_url().'/s/'.$seccion.'">':''?>
-						<?=$tabs[$seccion]?>
-						<?=($sesion_iniciada || $seccion=="inicio")?'</a>':''?>
-					</li>
-				<?php  } */ ?>
 		</ul>
 	</div>
 	<div class="ancho-800" style="height:85px;"></div>

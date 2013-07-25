@@ -4,6 +4,12 @@ body {
 	margin: 0;
 	background-color: #fff;
 }
+label.etq_radio {
+	vertical-align: 15% !important;
+}
+.sin-margenes {
+	margin: 0 !important;
+}
 .panel-1 {
 	position: relative;
 	background-color: #f0f3f9;

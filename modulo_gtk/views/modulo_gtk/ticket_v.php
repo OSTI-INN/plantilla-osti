@@ -44,12 +44,11 @@
 </head>
 
 <body>
-	<center><h1> GENERAR TICKET</h1><br><br></center>
-	<form class="formulario" id="formulario" name="formulario" action="<?=site_url()?>/modulo_gtk/ticket_c/insertar_ticket" method="post">
-	
+	<h2 class="titulo-seccion seguido">Tickets</h2>
+	<form class="formulario sin-margenes" id="formulario" name="formulario" action="<?=site_url()?>/modulo_gtk/ticket_c/insertar_ticket" method="post">
 
-		<hr width="100%">
-			<div class="ancho-120 seguido"></div>
+			<hr>
+
 			<a href='<?=site_url()?>/..'
 			   title="Inicio"
 			><div class="boton_accion" id="boton_inicio" name="boton_inicio"></div></a>
@@ -77,56 +76,35 @@
 			<option value="<?=$registro['codigo_categoria']?>"><?=$registro['descripcion_categoria']?></option>
 		        <?php }?>
 		    </select>
-<br>
+		<br>
 		<label class="ancho-120 seguido alinear-derecha">Sub Categorías:</label>	
 		<select class="ancho-200" width="50%" id="codigo_categoria_padre" name="codigo_categoria_padre">
 		  <option value="01">Seleccione Sub Categoría</option>
 		 <?php foreach($sub_categoria as $registro) {?>
 			<option value="<?=$registro['codigo_categoria']?>"><?=$registro['descripcion_categoria']?></option>
 		        <?php }?>
-</select>
-<br>
+		</select>
+		<br>
+
 		<label class="ancho-120 seguido alinear-derecha">Asunto: </label> <input type="text" class="ancho-400" name="asunto_ticket" id="asunto_ticket" size="40" maxlength="100">
-<br>
+		<br>
+
 		<label class="ancho-120 seguido alinear-derecha alinear-arriba">Descripción:</label>
 		<textarea name="descripcion_ticket" id="descripcion_ticket" rows="5" class="ancho-400" onClick='descripcion_ticket.value=""'>Agregue aquí una descripción...</textarea>
-<br>
+		<br>
+
 		<label class="ancho-120 seguido alinear-derecha">Prioridad:</label>
-		<select class="ancho-200" width="50%" id="codigo_prioridad" name="codigo_prioridad">
-		  <option>Seleccione Prioridad</option>
-		  <option value="01">Alta</option>
-		  <option value="02">Normal</option>
-		  <option value="03">Baja</option>
-</select>
-<br>
-	<!-- <input type="checkbox" name="copia_correo" >Recibir copia al correo<br>-->
+			<select class="ancho-200" width="50%" id="codigo_prioridad" name="codigo_prioridad">
+			  <option>Seleccione Prioridad</option>
+			  <option value="01">Alta</option>
+			  <option value="02">Normal</option>
+			  <option value="03">Baja</option>
+		</select>
+		<br>
+		<!-- <input type="checkbox" name="copia_correo" >Recibir copia al correo<br>-->
 
+	</form>
 
-</form>
-		<table border="1">
-		<tr>
-		<td>
-		TÍTULO
-		</td>
-		<td>
-		ASUNTO	
-		</td>
-		</tr>
-		<?php foreach($tickets as $registro) {?>
-			<tr>
-			<td>
-				<?=$registro['asunto_ticket']?>
-			</td>	
-			<td>
-				<?=$registro['descripcion_ticket']?>
-			
-			</td>
-			</tr>
-			
-		<?php
-		}
-		?>
-		</table>
 </body>
 </html>
 

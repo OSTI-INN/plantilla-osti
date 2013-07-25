@@ -38,8 +38,8 @@ class S extends CI_Controller {
 		$this->cs ("inicio");	
 	}
 
-    public function cm ($id_modulo=""){
-        $url_modulo="javascript:alert('E!');";
+    public function cm ($id_modulo=""){  //cargar módulo ... jjy
+        $url_modulo="javascript:alert('E!');"; // alerta de error ... 
         global $config;
         $config['sesion']['seccion_activa']	= $id_modulo;
         $config['sesion']['modulo_activo']	= $id_modulo;

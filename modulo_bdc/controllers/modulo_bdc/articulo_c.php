@@ -7,9 +7,10 @@ class Articulo_c extends CI_Controller {
         $this->load->model('modulo_bdc/articulo_m');
     }
 
-	public function index(){
-       $datos['categorias'] = $this->listar_categorias();
-       $datos['subcategorias'] = $this->listar_subcategorias();
+	public function index(){       
+       $datos['categorias']     = $this->listar_categorias();
+       $datos['subcategorias']  = $this->listar_subcategorias();
+
        $this->load->view('modulo_bdc/articulo_v', $datos);
 	}
 
@@ -87,7 +88,7 @@ class Articulo_c extends CI_Controller {
         return $datos;
     }
 
-    public function listar_respuestas(){
+    function listar_respuestas(){
         $id     = '';
         $datos  = array(
                     'descripcion_respuesta' => $this->input->post( 'busqueda' ) ,
@@ -98,5 +99,10 @@ class Articulo_c extends CI_Controller {
 
         $salida = $this->articulo_m->listar_respuestas( $id, $datos ); 
     } 
+
+    function consultar_articulos(){
+        $datos['categorias'] = $this->articulo_m->listar_categorias();
+        $this->load->view('modulo_bdc/respuesta_v', $datos);
+    }
 
 }

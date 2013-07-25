@@ -1,26 +1,25 @@
 		div.boton_accion{
-				border: 1px solid #ddd !important;
-				border-radius: 3px;
-				width: 30px;
-				height: 18px;
-		  		background-repeat: no-repeat no-repeat;
-		  		display: inline-block;
-	  		}
-	  		div#boton_guardar  { background-position:50% -18px;  }
-	  		div#boton_inicio   { background-position:50% -391px; }
-	  		div#boton_limpiar  { background-position:50% -194px; }
-	  		div#boton_adjuntar { background-position:50% -256px; } 
-	  		div#boton_buscar   { 
-	  			background-position:50% -436px;
-	  			width: 30px !important;
-				height: 16px !important;
-	  		} 
+			border: 1px solid #ddd !important;
+			border-radius: 3px;
+			width: 30px;
+			height: 18px;
+	  		background-repeat: no-repeat no-repeat;
+	  		display: inline-block;
+  		}
+  		div#boton_guardar  { background-position:50% -18px;  }
+  		div#boton_inicio   { background-position:50% -391px; }
+  		div#boton_limpiar  { background-position:50% -194px; }
+  		div#boton_adjuntar { background-position:50% -256px; } 
+  		div#boton_buscar   { 
+  		  background-position: 50% -106px;
+  		  width: 35px !important;
+  		}
 
-	  		ul.tabs{
-	  			list-style-type: none;
-	  		}
-	  		ul.tabs li{
-	  			display: inline-block;
-	  			border: 1px solid #ddd !important;
-	  			padding: 5px;
-	  		}
+  		ul.tabs{
+  			list-style-type: none;
+  		}
+  		ul.tabs li{
+  			display: inline-block;
+  			border: 1px solid #ddd !important;
+  			padding: 5px;
+  		}

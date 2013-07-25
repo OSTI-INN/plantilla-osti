@@ -16,15 +16,14 @@
 		
 		function enviar(){
 			document.formulario.submit();
-
 		}
 
 		function limpiar(){
 			document.formulario.reset();
-
 		}
-		
+
 		function seleccionar_tab(id_tab){
+
 			document.getElementById('tab_pregunta').setAttribute("class", "invisible");
 			document.getElementById('tab_respuesta').setAttribute("class", "invisible");
 			
@@ -41,10 +40,13 @@
 		</script>
 	</head>
 	<body>
-		<form class="formulario" name="formulario" id="formulario"  action="<?=site_url()?>/modulo_bdc/articulo_c/insertar_articulo" method="post" >
-		<h1>Registro DUF</h1>
-		<hr width="100%">
-			<div class="ancho-120 seguido"></div>
+		<h2 class="titulo-seccion seguido">
+			Dudas Frecuentes
+		</h2>
+		<hr>
+		
+		<form class="formulario sin-margenes" name="formulario" id="formulario"  action="<?=site_url()?>/modulo_bdc/articulo_c/insertar_articulo" method="post" >
+
 			<a href='<?=site_url()?>/..'
 			   title="Inicio"
 			><div class="boton_accion" id="boton_inicio" name="boton_inicio"></div></a>
@@ -84,20 +86,29 @@
 			<label class="ancho-120 seguido alinear-derecha">Sub-Categorías:</label>
             <select class="ancho-200" width="50%" id="subcategoria" name="subcategoria">
             	<option selected value="">Seleccione Subcategoría</option>
-                <?php 
-				foreach ($subcategorias as $registro) {
-				?>	
+
+                <?php foreach ($subcategorias as $registro) { ?>	
 				
 					<option value="<?=$registro['codigo_categoria']?>"><?=$registro['descripcion_categoria']?></option>
 				
-				<?php	
-				}
-		 		?>
+				<?php } ?>
+				
             </select>
 			<br/>
 
 			<label class="ancho-120 seguido alinear-derecha">Título:</label> <input class="ancho-400" type="text" name="titulo" id="titulo" size="15" maxlength="50">
 			<br/>
+
+			<?php 
+				$parametros ['pestanas'] = array (
+					"tab_pregunta" 	=> "Pregunta",
+					"tab_respuesta" => "Respuesta",
+				);
+			?>
+
+			<?=html_pestanas('',$parametros)?>
+
+
 			<ul class="tabs">
 				<li>
 					<a href="javascript:void(0);" onclick="javascript:seleccionar_tab('tab_pregunta')" >Pregunta</a>
@@ -131,7 +142,7 @@
             </select>
 			**/?>
 		</form>
-		<a href='<?=site_url()?>/s/respuesta'>Controlador Respuesta</a>
+		<a href='<?=base_url()?>modulo_bdc.php'>Controlador Respuesta</a>
 		
 	</body>
 </html>

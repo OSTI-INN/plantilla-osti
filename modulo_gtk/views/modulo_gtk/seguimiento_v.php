@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html>
 	<head>
 	<meta charset='UTF-8'>
 	<link rel="stylesheet" type="text/css" href="<?=base_url()?>/css/estilo.css">
 	<center><h1> SEGUIMIENTO DE MIS TICKETS</h1><br><br></center>
+	
 <form class="formulario" action="ticket" method="post" enctype="text/plain">
 
 		<input type="submit" value="" name="enviar" id="guardar" title="Guardar"><input type="submit" value="" name="enviar" id="anexar" title="Anexar"><br><br>

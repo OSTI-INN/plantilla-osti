@@ -5,7 +5,16 @@ class S extends CI_Controller {
     public function __construct() {
         parent::__construct();
     }
+
     public function index(){
-		redirect(site_url().'/modulo_gtk/ticket_c','location');
+		$this->listar_tickets();
     }  
+
+	public function ticket(){
+		redirect(site_url().'/modulo_gtk/ticket_c', 'location');
+	}
+
+	public function listar_tickets(){
+		redirect(site_url().'/modulo_gtk/ticket_c/listar_tickets', 'location');
+	}
 }
