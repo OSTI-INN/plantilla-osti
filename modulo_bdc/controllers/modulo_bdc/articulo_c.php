@@ -31,7 +31,8 @@ class Articulo_c extends CI_Controller {
                     **/
 	    		);  
         /**
-        revisar mas adelante
+        revisar mas adelante     $datos['categorias']     = $this->articulo_m->listar_categorias();
+       $datos['subcategorias']  = $this->articulo_m->listar_subcategorias();
                
         $validacion = $this->validar_articulo( $id, $datos );
     	if ( $validacion['valido'] == 0 ){
@@ -48,7 +49,9 @@ class Articulo_c extends CI_Controller {
     	if ( $salida == 0 ) $this->index();
     }
 /**
-    function validar_articulo($id, $parametros = array() ){
+    function validar_articulo($id, $parame     $datos['categorias']     = $this->articulo_m->listar_categorias();
+       $datos['subcategorias']  = $this->articulo_m->listar_subcategorias();     $datos['categorias']     = $this->articulo_m->listar_categorias();
+       $datos['subcategorias']  = $this->articulo_m->listar_subcategorias();tros = array() ){
     	$errores = '';
     	$valido = false;//validacion falsa por omision
 
@@ -86,10 +89,21 @@ class Articulo_c extends CI_Controller {
                     'descripcion_pregunta'  => $this->input->post( 'busqueda' ) ,
                     'palabras_claves'       => $this->input->post( 'busqueda' ) , 
                     'titulo'                => $this->input->post( 'busqueda' ) ,
-                );  echo '<pre>',print_r($datos),'</pre>';
+                );  
 
-        $salida = $this->articulo_m->listar_respuestas( $id, $datos ); 
+        $salida['categorias']     = $this->articulo_m->listar_categorias();
+        $salida['subcategorias']  = $this->articulo_m->listar_subcategorias();
+        $salida['articulo']      = $this->articulo_m->listar_respuestas( $id, $datos ); 
+        $this->load->view('modulo_bdc/respuesta_v', $salida);       
     } 
+
+    function mostrar_articulo($id){
+        //echo $id;die();
+        $salida['articulo'] = $this->articulo_m->mostrar_articulo($id);
+        //echo '<pre>',print_r($salida),'</pre>';die;
+        $this->load->view('modulo_bdc/mostrar_respuesta_v', $salida);
+
+    }
 
     function consultar_articulos(){
         $datos['categorias'] = $this->articulo_m->listar_categorias();

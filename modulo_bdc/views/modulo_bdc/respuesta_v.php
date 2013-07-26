@@ -54,9 +54,9 @@
 			><div class="boton_accion" id="boton_adjuntar" name="boton_adjuntar"></div></a>
 				
 			<hr>
-			<form class="formulario">
+			<form class="formulario" id="formulario" name="formulario" action="<?=site_url()?>/modulo_bdc/articulo_c/listar_respuestas" method="post"> 
 				<label class="ancho-100 seguido alinear-derecha">Quiero saber ...&nbsp;</label>
-				<input type="text" class="ancho-400">
+				<input type="text" class="ancho-400" id="busqueda" name="busqueda">
 				<a  href='javascript:void(0);' 
 					title="Buscar" 
 					onclick="javascript:enviar('boton_buscar');"
@@ -94,6 +94,23 @@
 			*/?>
 
 		</form>
+
+		<?php 
+				if(isset($articulo)){
+				foreach ($articulo as $registro) {
+				?>	
+				
+			<a href='<?=site_url()?>/modulo_bdc/articulo_c/mostrar_articulo/<?=$registro['codigo_articulo']?>'><h2><?=$registro['titulo']?></h2></a>
+		
+		<p>
+			<?=$registro['descripcion_pregunta']?>
+		</p>
+		<hr>
+				
+				<?php	
+				}
+			}
+		 		?>
 
 		<table class="ancho-full">
 			<tr>

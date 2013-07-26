@@ -48,13 +48,13 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-if ( $_SERVER ['SERVER_NAME'] == 'localhost'){
+//if ( $_SERVER ['SERVER_NAME'] == 'localhost'){
   $db['default']['hostname'] = 'localhost';
   $db['default']['password'] = '321321';
-} else {
+//} else {
   $db['default']['hostname'] = '172.30.0.83';
   $db['default']['password'] = 'inndesarrollo';
-}
+//}
 
 $db['default']['username'] = 'postgres';
 $db['default']['database'] = 'intranet';
