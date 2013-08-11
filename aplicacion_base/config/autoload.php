@@ -80,7 +80,7 @@ $autoload['helper'] = array('url','funciones_comunes');
 |
 */
 
-$autoload['config'] = array('ap_config');
+$autoload['config'] = array('_ap_config');
 
 
 /*

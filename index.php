@@ -72,7 +72,17 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
+
 	$application_folder = 'aplicacion_base';
+	
+	// *** sólo para módulos ... // ... jjy
+	$arr_script = explode( '/', $_SERVER['PHP_SELF'] );
+	$script = str_replace ('.php', '', trim( $arr_script[ count( $arr_script ) - 1 ] ) );
+	
+	if ( $script =! 'index' ) {
+		$application_folder = $script;
+	}
+
 
 /*
  * --------------------------------------------------------------------

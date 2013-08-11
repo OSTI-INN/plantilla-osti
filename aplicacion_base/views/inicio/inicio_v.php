@@ -1,12 +1,28 @@
+<section>
+   <div class="section ancho-full centrado">
 
-	<div class="ancho-630 flotado-derecha">
+      <?php global $config; ?>
+      <?php if ( $config['aplicacion']['mostrar_logo'] ){ ?>
 
-		<img class="" src='<?=base_url()?>/imgs/logo.png'/>
-		
-		<img src='<?=base_url()?>/imgs/mantis-1.jpg'/>
+         <div class="img-logo"></div>
 
-		<br>&nbsp;<br>
-		<p>
-			Expertos en nutrición te enseñarán que comer no es lo mismo que alimentarse. Además entérate de la visión de soberanía alimentaria que tiene el Ministerio del Poder Popular para la Alimentación.
-		</p>
+      <?php } ?>
+      <?php if ( $config['aplicacion']['mostrar_titulo'] ){ ?>
+
+         <h1 class="titulo-portada"><?=$config['aplicacion']['nombre_completo']?></h1>
+
+      <?php } ?>
+      <?php if ( $config['aplicacion']['mostrar_portada'] ){ ?>
+         
+         <div class="img-portada" src='<?=base_url()?>imgs/portada.png'></div>
+
+      <?php } ?>
+      <?php if ( $config['aplicacion']['descripcion'] ){ ?>
+         <br><hr>
+   		<p>
+            <?=$config['aplicacion']['descripcion']?>
+   		</p>
+      <?php } ?>
+
 	</div>
+</section>

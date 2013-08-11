@@ -1,9 +1,54 @@
-<div class="panel-1 ancho-150 flotado-izquierda fijo">
-	<ul class="menu-izquierda">
+<?php
+global $menus_izquierda_activos; // definicion de menús de la izquierda  .... jjy
+if ( array_key_exists( $seccion, $menus_izquierda_activos ) ) {
+	$tipo_menu = 'menu-izquierda';
+	$estilo_menu = "panel-1 ancho-minimo-150 ancho-menu-izquierdo flotado-izquierda fijo";
+	if ( isset( $menus_izquierda_activos [$seccion][0] ) ){
+		$tipo_menu = $menus_izquierda_activos [$seccion][0];
+		$estilo_menu = $tipo_menu;
+	}
+/** 
+SOLO CONTINUA ADELANTE GENERANDO EL MENU, SI LA SECCION HA SIDO DEFINIDA ARRIBA ... jjy
+**/
+?>
 
-	<?php switch ($seccion) { 
+<div class="<?=$estilo_menu?>">
+	
+	<ul class="<?=$tipo_menu?>">
 
-		case "inicio": ?>
+	<?php switch ($seccion) {
+	 
+	 	case "modulo_bdc": ?>
+
+			<?php $this->load->view('../../modulo_bdc/views/menu_izquierda_v'); ?>
+
+		<?php break; ?>
+
+		<?php case "modulo_gtk": ?>
+
+			<?php $this->load->view('../../modulo_gtk/views/menu_izquierda_v'); ?>
+
+		<?php break; ?>
+
+		<?php case "modulo_imc": ?>
+
+			<?php $this->load->view('../../modulo_imc/views/menu_izquierda_v'); ?>
+
+		<?php break; ?>
+
+		<?php case "modulo_base": ?>
+
+			<?php $this->load->view('../../modulo_base/views/menu_izquierda_v'); ?>
+
+		<?php break; ?>
+
+		<?php case "modulo_formulario": ?>
+
+			<?php $this->load->view('../../modulo_formulario/views/menu_izquierda_v'); ?>
+
+		<?php break; ?>
+
+		<?php /*case "inicio": ?>
 
 				<li class="activo">Iniciar Sesión</li>
 				<hr>
@@ -23,20 +68,12 @@
 					<input type="submit" name="btnAcceder" id="btnAcceder" class="" value="Acceder"/>
 				</li>					
 		
-		<?php break; ?>
-
-		<?php case "modulo_bdc": ?>
-
-			<?php $this->load->view('../../modulo_bdc/views/menu_izquierda_v'); ?>
-
-		<?php break; ?>
-
-		<?php case "modulo_gtk": ?>
-
-			<?php $this->load->view('../../modulo_gtk/views/menu_izquierda_v'); ?>
-
-		<?php break; ?>
+		<?php break; */ ?>
 
 	<?php } ?>
 	</ul>
 </div>
+
+<?php } /**
+	FIN MENU
+**/ ?>
